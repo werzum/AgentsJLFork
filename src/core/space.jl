@@ -23,7 +23,7 @@ Return the number of edges in the `model` space.
 """
 LightGraphs.ne(abm::ABM) = LightGraphs.ne(abm.space.graph)
 
-struct GraphSpace{G} <: DiscreteSpace
+mutable struct GraphSpace{G} <: DiscreteSpace
   graph::G
   agent_positions::Vector{Vector{Int}}
 end
